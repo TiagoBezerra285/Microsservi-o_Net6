@@ -1,0 +1,152 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle" Version="5.6.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.13">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.13">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Swashbuckle.AspNetCore.SwaggerUI" />
+    <None Remove="Swashbuckle" />
+    <None Remove="Swashbuckle.AspNetCore.Annotations" />
+    <None Remove="AutoMapper" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="Pomelo.EntityFrameworkCore.MySql" />
+    <None Remove="Model\" />
+    <None Remove="Model\Base\" />
+    <None Remove="Model\Context\" />
+    <None Remove="MySqlConnector" />
+    <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="Repository\" />
+    <None Remove="Data\" />
+    <None Remove="Data\ValueObjects\" />
+    <None Remove="Config\" />
+    <None Remove="Controllers\" />
+    <None Remove="GeekShopping.IdentityServer\obj\GeekShopping.IdentityServer.csproj.nuget.g.props" />
+    <None Remove="GeekShopping.IdentityServer\obj\GeekShopping.IdentityServer.csproj.nuget.g.targets" />
+    <None Remove="GeekShopping.IdentityServer\obj\project.nuget.cache" />
+    <None Remove="GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.assets.cache" />
+    <None Remove="GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.RazorAssemblyInfo.cache" />
+    <None Remove="GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.AssemblyInfoInputs.cache" />
+    <None Remove="GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.csproj.AssemblyReference.cache" />
+    <None Remove="GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\favicon.ico" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\css\site.css" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\js\site.js" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\LICENSE" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap.css" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\jquery\LICENSE.txt" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\jquery\dist\jquery.min.js" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\jquery\dist\jquery.min.map" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\jquery\dist\jquery.js" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\jquery-validation\LICENSE.md" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Remove="GeekShopping.IdentityServer\wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Remove="GeekShopping.IdentityServer\Views\Shared\_Layout.cshtml.css" />
+    <None Remove="Utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="Model\Base\" />
+    <Folder Include="Model\Context\" />
+    <Folder Include="Model\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Data\" />
+    <Folder Include="Data\ValueObjects\" />
+    <Folder Include="Config\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="GeekShopping.IdentityServer\Program.cs" />
+    <Compile Remove="GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.RazorAssemblyInfo.cs" />
+    <Compile Remove="GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.AssemblyInfo.cs" />
+    <Compile Remove="GeekShopping.IdentityServer\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Remove="GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.GlobalUsings.g.cs" />
+    <Compile Remove="GeekShopping.IdentityServer\Models\ErrorViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="GeekShopping.IdentityServer\Views\_ViewImports.cshtml" />
+    <Content Remove="GeekShopping.IdentityServer\appsettings.json" />
+    <Content Remove="GeekShopping.IdentityServer\appsettings.Development.json" />
+    <Content Remove="GeekShopping.IdentityServer\obj\GeekShopping.IdentityServer.csproj.nuget.dgspec.json" />
+    <Content Remove="GeekShopping.IdentityServer\obj\project.assets.json" />
+    <Content Remove="GeekShopping.IdentityServer\Properties\launchSettings.json" />
+    <Content Remove="GeekShopping.IdentityServer\Views\_ViewStart.cshtml" />
+    <Content Remove="GeekShopping.IdentityServer\Views\Home\Privacy.cshtml" />
+    <Content Remove="GeekShopping.IdentityServer\Views\Home\Index.cshtml" />
+    <Content Remove="GeekShopping.IdentityServer\Views\Shared\_Layout.cshtml" />
+    <Content Remove="GeekShopping.IdentityServer\Views\Shared\Error.cshtml" />
+    <Content Remove="GeekShopping.IdentityServer\Views\Shared\_ValidationScriptsPartial.cshtml" />
+  </ItemGroup>
+</Project>
